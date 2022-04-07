@@ -1,0 +1,159 @@
+main {
+  text-align: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-family: Microsoft YaHei;
+}
+
+.logo {
+  width: 93.5px;
+  height: 46px
+}
+
+.glass {
+  width: 80%;
+  height: 80%;
+  position: relative;
+  background: rgba(0, 0, 0, .5);
+  box-shadow: 3px 3px 6px 3px rgba(0, 0, 0, .5);
+}
+
+.active {
+  color: #409eff;;
+}
+
+.glass::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: blur(20px);
+  z-index: -1;
+  margin: -30px;
+}
+
+.back {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  top: 35px;
+  right: 20px;
+  height: 30px;
+  cursor:pointer;
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav div {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor:pointer;
+}
+.nav div::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 50px;
+  background-color:#fff;
+  border-radius: 2px;
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.title2 {
+  width: 100%;
+  text-align: center;
+  height: 50px;
+  font-size: 36px;
+  margin-top: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 50px;
+}
+
+.card {
+  width: 175px;
+  height: 225px;
+  border-radius: 8px;
+  background-color: #fff;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.img {
+  position: absolute;
+  width: auto;
+  height: auto;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) translateX(50%);
+  z-index: 1;
+}
+
+.card .bottom {
+  margin-top: 50px;
+  font-size: 20px;
+  z-index: 2;
+}
+
+.card div {
+  z-index: 2;
+}
+
+.lanzou {
+  position: absolute;
+  height: 52px;
+  width: 78px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%) translateX(50%) scale(1.5);
+  background-position: 0px -56px;
+  z-index: 1;
+  background-image: url(./lanzou.gif);
+  margin-top: 0px !important;
+}
+
+/* 手机版代码 */
+@media (min-width: 640px) {
+  main {
+    max-width: none;
+  }
+}
